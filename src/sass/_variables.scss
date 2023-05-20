@@ -1,0 +1,35 @@
+@import '_colors.scss';
+
+@mixin flexCenter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin aftAndBef{
+    &::after{
+        content: "";
+        background: $bg-color;
+        width: 15rem;
+        height: 0.3rem;
+        border-radius: 5px;
+        margin: 0 2rem;
+    }
+    &::before{
+        content: "";
+        background: $bg-color;
+        width: 15rem;
+        height: 0.3rem;
+        border-radius: 5px;
+        margin: 0 2rem;
+
+    }
+}
+
+@mixin title{
+    @include aftAndBef;
+    display: flex;
+    align-items: center;
+    font-size: 3.2rem;
+    font-weight: 500;
+}
