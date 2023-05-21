@@ -92,6 +92,8 @@ table {
   box-shadow: 0 0 5px #fff;
   background-color: rgba(0, 0, 0, 0.5);
   margin: 0 15rem;
+  overflow: auto;
+  padding: 1rem;
 }
 
 @media (max-width: 700px) {
@@ -103,9 +105,31 @@ table {
 }
 
 .home_wrapper_title {
-  font-size: 3rem;
+  display: flex;
+  align-items: center;
+  font-size: 3.2rem;
+  font-weight: 500;
+  font-size: 3.4rem;
   font-family: "Merriweather", serif;
   margin-top: 4rem;
+}
+
+.home_wrapper_title::after {
+  content: "";
+  background: #fff;
+  width: 10rem;
+  height: 0.2rem;
+  border-radius: 5px;
+  margin: 0 2rem;
+}
+
+.home_wrapper_title::before {
+  content: "";
+  background: #fff;
+  width: 10rem;
+  height: 0.2rem;
+  border-radius: 5px;
+  margin: 0 2rem;
 }
 
 .home_wrapper_buttons {

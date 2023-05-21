@@ -4,6 +4,7 @@
 @import '_fonts.scss';
 @import '_home.scss';
 @import '_calculator.scss';
+@import '_recipes.scss';
 html{
     font-size: 10px;
     font-family: $font-base;
@@ -23,3 +24,31 @@ html{
     }
 
 }
+            /* ===== Scrollbar CSS ===== */
+        /* Firefox */
+        * {
+            scrollbar-width: auto;
+            scrollbar-color: #8f54a0 ;
+        }
+
+        /* Chrome, Edge, and Safari */
+        *::-webkit-scrollbar {
+            width: 7px;
+            margin: 10px;
+        }
+        
+        *::-webkit-scrollbar-track {
+            background: transparent;
+            box-shadow: inset 0 0 10px 10px red;
+            border: 25px solid transparent;
+        }
+        
+        *::-webkit-scrollbar-thumb {
+            background-color: transparent;
+            border-radius: 10px;
+            box-shadow: inset 0 0 10px 10px red;
+            border: 25px solid transparent;
+        }
+
+
+        

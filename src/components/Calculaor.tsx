@@ -8,7 +8,8 @@ const Calculator = () =>{
                     <input pattern="\d*" maxLength={2} placeholder="5" id="portion" className="calculator_ingr_element_input" type="text" />
                 </div>
                 <div className="calculator_ingr_element">
-                    <label  htmlFor="weight" className="calculator_ingr_element_title">Waga porcji (gram)</label>
+                    <label  htmlFor="weight" className="calculator_ingr_element_title">Waga jednej porcji (gram)</label>
+                    
                     <input pattern="\d*" maxLength={3} placeholder="280" id="weight" className="calculator_ingr_element_input" type="text" />
                 </div>
                 <div className="calculator_ingr_element">
