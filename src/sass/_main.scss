@@ -2,8 +2,24 @@
 @import '_colors.scss';
 @import '_reset.scss';
 @import '_fonts.scss';
-
+@import '_home.scss';
+@import '_calculator.scss';
 html{
     font-size: 10px;
     font-family: $font-base;
+    cursor: default;
+
+    @media (max-width: 1400px) {
+        font-size: 9px;
+    }
+    @media (max-width: 1000px) {
+        font-size: 8px;
+    }
+    @media (max-width: 600px) {
+        font-size: 7px;
+    }
+    @media (max-width: 300px) {
+        font-size: 6px;
+    }
+
 }

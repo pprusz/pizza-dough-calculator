@@ -1,0 +1,92 @@
+@import '_variables.scss';
+@import '_colors.scss';
+@import '_reset.scss';
+@import '_fonts.scss';
+
+.home{
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../assets/background.jpg');
+    background-position: left;        
+    background-size: cover;
+    
+    @media (min-width: 700px) {
+        background-position: center;
+        flex-direction: row-reverse;
+    }
+    @media (max-width: 700px) {
+        justify-content: center;
+    }
+
+
+
+    &_wrapper{
+        display: flex;
+        height: 80rem;
+        width: 70rem;
+        flex-direction: column;
+        align-items: center;
+        backdrop-filter: blur(5px);
+        border-radius: 2rem;
+        border: 1px solid $main-color;
+        color: $main-color;
+        box-shadow: 0 0 5px $main-color;
+        background-color: rgba(0, 0, 0, 0.5);
+        margin: 0 15rem;
+
+        @media (max-width: 700px) {
+            margin: 0;
+            width: 90%;
+            height: 90%;
+        }
+        
+
+        &_title{
+            font-size: 3rem;
+            font-family: $font-alt;
+            margin-top: 4rem;
+        }
+        &_buttons{
+            display: flex;
+            justify-content: space-between;
+            width: 70%;
+            margin: 4rem 4rem;
+
+            @media (max-width: 700px) {
+                width: 80%;
+            }
+            @media (max-width: 400px) {
+                width: 80%;
+                flex-direction: column;
+                align-items: center;
+            }
+            
+
+            .active{
+                border: 0.75px solid $main-color;
+            }
+            
+            &_button{
+                border: none;
+                background: none;
+                cursor: pointer;
+                border: 0.75px solid transparent;
+                color: white;
+                transition: 0.1s;
+                padding: 1rem ;
+                font-size: 1.8rem;
+                font-weight: 400;
+                margin: 15px ;
+
+                &:hover{
+                    border: 0.75px solid $main-color;
+                }
+            }
+
+
+        }
+    }
+}
