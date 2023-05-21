@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { Calculator } from "./Calculaor";
+import { Recipes } from "./Recipes";
 
 const Home = () =>{
     const [page, setPage] = useState(0);
@@ -16,7 +17,7 @@ const Home = () =>{
                     <button onClick={()=>setPageClic(0)} className={`home_wrapper_buttons_button ${page === 0 ? "active" : ""}`}>STWÓRZ PIZZE</button>
                     <button onClick={()=>setPageClic(1)} className={`home_wrapper_buttons_button ${page === 1 ? "active" : ""}`}>GOTOWE PRZEPISY</button>
                 </div>
-                    <Calculator/>
+                    {page === 0 ? <Calculator /> : <Recipes/>}
             </div>
         </section>
     )

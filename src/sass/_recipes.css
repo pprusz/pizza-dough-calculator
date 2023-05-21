@@ -55,23 +55,20 @@ table {
   border-spacing: 0;
 }
 
-.calculator {
-  width: 90%;
-  padding: 0 0 4rem 0;
+.recipes {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.calculator_title {
+.recipes_title {
   display: flex;
   align-items: center;
   font-size: 3.2rem;
   font-weight: 500;
-  font-size: 2.8rempx;
 }
 
-.calculator_title::after {
+.recipes_title::after {
   content: "";
   background: #fff;
   width: 10rem;
@@ -80,67 +77,11 @@ table {
   margin: 0 2rem;
 }
 
-.calculator_title::before {
+.recipes_title::before {
   content: "";
   background: #fff;
   width: 10rem;
   height: 0.2rem;
   border-radius: 5px;
   margin: 0 2rem;
-}
-
-.calculator_button {
-  margin-top: 6rem;
-  font-size: 2rem;
-  font-weight: 500;
-  border-radius: 40px;
-  padding: 1.5rem 2.5rem;
-  border: 1px solid #fff;
-  background-color: #08a6e4;
-  box-shadow: 0 0 1px #fff;
-  color: #fff;
-  cursor: pointer;
-  transition: 0.2s;
-}
-
-.calculator_button:hover {
-  box-shadow: 0 0 3px #fff;
-  background-color: #fff;
-  color: black;
-}
-
-.calculator_ingr {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.calculator_ingr_element {
-  width: 40%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 2rem;
-}
-
-.calculator_ingr_element_title {
-  font-size: 1.8rem;
-  margin: 1.5rem 0;
-}
-
-.calculator_ingr_element_input {
-  width: 15%;
-  padding: 10px;
-  border: none;
-  border-bottom: 1px solid #c0baba;
-  background: transparent;
-  transition: 0.2s;
-  text-align: center;
-  color: white;
-}
-
-.calculator_ingr_element_input:focus {
-  width: 30%;
-  outline: none;
-  border-bottom: 1px solid white;
 }
