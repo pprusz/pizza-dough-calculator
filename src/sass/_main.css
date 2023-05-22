@@ -153,7 +153,7 @@ table {
   border: 1px solid #fff;
   color: #fff;
   box-shadow: 0 0 5px #fff;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.7);
   margin: 0 15rem;
   overflow: auto;
   padding: 1rem;
@@ -169,10 +169,11 @@ table {
 
 .home_wrapper_title {
   display: flex;
+  text-align: center;
   align-items: center;
   font-size: 3.2rem;
   font-weight: 500;
-  font-size: 3rem;
+  font-size: 3.4rem;
   font-family: "Merriweather", serif;
   margin-top: 4rem;
 }
@@ -301,6 +302,7 @@ table {
 
 .calculator_title {
   display: flex;
+  text-align: center;
   align-items: center;
   font-size: 3.2rem;
   font-weight: 500;
@@ -326,11 +328,11 @@ table {
 }
 
 .calculator_button {
-  margin-top: 6rem;
+  margin-top: 4rem;
   font-size: 2rem;
   font-weight: 500;
   border-radius: 40px;
-  padding: 1.5rem 2.5rem;
+  padding: 1.2rem 2.5rem;
   border: 1px solid #fff;
   background-color: #08a6e4;
   box-shadow: 0 0 1px #fff;
@@ -365,19 +367,71 @@ table {
 }
 
 .calculator_ingr_element_input {
-  width: 30%;
+  width: 15%;
   padding: 10px;
-  border-radius: 5px;
   border: none;
-  background: #c0baba;
+  border-bottom: 1px solid #c0baba;
+  background: transparent;
   transition: 0.2s;
   text-align: center;
+  color: white;
+  font-size: 1.6rem;
 }
 
 .calculator_ingr_element_input:focus {
-  outline: 1px solid #fff;
+  width: 30%;
+  outline: none;
+  border-bottom: 1px solid white;
+}
+
+.calculator_result {
+  height: 0;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+  transition: 0.2s;
+}
+
+.calculator_result_ingredients {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.calculator_result_ingredients span {
+  text-align: center;
+  width: 40%;
+  margin: 2rem 0;
+  font-size: 1.9rem;
+}
+
+.calculator_result_title {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  font-size: 3.2rem;
+  font-weight: 500;
+}
+
+.calculator_result_title::after {
+  content: "";
   background: #fff;
-  box-shadow: 0 0 7px #fff;
+  width: 10rem;
+  height: 0.2rem;
+  border-radius: 5px;
+  margin: 0 2rem;
+}
+
+.calculator_result_title::before {
+  content: "";
+  background: #fff;
+  width: 10rem;
+  height: 0.2rem;
+  border-radius: 5px;
+  margin: 0 2rem;
 }
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
@@ -434,6 +488,38 @@ table {
   border-spacing: 0;
 }
 
+.recipes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.recipes_title {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  font-size: 3.2rem;
+  font-weight: 500;
+}
+
+.recipes_title::after {
+  content: "";
+  background: #fff;
+  width: 10rem;
+  height: 0.2rem;
+  border-radius: 5px;
+  margin: 0 2rem;
+}
+
+.recipes_title::before {
+  content: "";
+  background: #fff;
+  width: 10rem;
+  height: 0.2rem;
+  border-radius: 5px;
+  margin: 0 2rem;
+}
+
 html {
   font-size: 10px;
   font-family: "Open Sans", sans-serif;
@@ -473,19 +559,19 @@ html {
 
 /* Chrome, Edge, and Safari */
 *::-webkit-scrollbar {
-  width: 7px;
-  margin: 10px;
+  width: 0;
+  margin: 0;
 }
 
 *::-webkit-scrollbar-track {
   background: transparent;
-  box-shadow: inset 0 0 10px 10px red;
-  border: 25px solid transparent;
+  box-shadow: inset 0 0 0 0 red;
+  border: 0 solid transparent;
 }
 
 *::-webkit-scrollbar-thumb {
   background-color: transparent;
-  border-radius: 10px;
-  box-shadow: inset 0 0 10px 10px red;
+  border-radius: 0x;
+  box-shadow: inset 0 0 0 0 red;
   border: 25px solid transparent;
 }
