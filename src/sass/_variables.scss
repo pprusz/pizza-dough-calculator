@@ -29,6 +29,7 @@
 @mixin title{
     @include aftAndBef;
     display: flex;
+    text-align: center;
     align-items: center;
     font-size: 3.2rem;
     font-weight: 500;
