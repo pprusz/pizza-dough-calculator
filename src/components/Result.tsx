@@ -12,15 +12,18 @@ const Result = (props) =>{
     const saltWeight = Math.floor(salt * (waterWeight/1000));
     const oliWeight = Math.floor(oil * (waterWeight/1000));
 
+    const result = (inputs.portion, inputs.weight, inputs.salt, inputs.hydro, inputs.oil) === '' ? false : true;
+    // console.log(result)
+
     return(
         <div id="calculator_result" className="calculator_result">
             <h1 className='calculator_result_title'>SKŁADNIKI</h1>
             <div className="calculator_result_ingredients">
-                <span>Mąka: {flourWeight}</span>
-                <span>Woda: {waterWeight}</span>
-                <span>Sól: {saltWeight}</span>
-                <span>Oliwa:  {oliWeight}</span>
-                <span>Drożdże:   </span>
+                <span>Mąka: {result === false ? '-' : flourWeight + ' g'}</span>
+                <span>Woda: {result === false ? '-' : waterWeight + ' g (ml)'}</span>
+                <span>Sól: {result === false ? '-' : saltWeight + ' g'}</span>
+                <span>Oliwa:  {result === false ? '-' : oliWeight + ' g'}</span>
+                <span>Drożdże: {result === false ? '-' :   + ' g'}</span>
             </div>
             <h1 className='calculator_result_title'>PRZEPIS</h1>
             
