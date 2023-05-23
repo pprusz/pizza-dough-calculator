@@ -11,6 +11,8 @@ const Result = (props) =>{
     const waterWeight = Math.floor(hydro / 100 * flourWeight);
     const saltWeight = Math.floor(salt * (waterWeight/1000));
     const oliWeight = Math.floor(oil * (waterWeight/1000));
+    const yeast = (flourWeight*0.00117);
+    const yeastWeight = yeast.toFixed(2);
 
     const result = (inputs.portion, inputs.weight, inputs.salt, inputs.hydro, inputs.oil) === '' ? false : true;
     // console.log(result)
@@ -23,7 +25,7 @@ const Result = (props) =>{
                 <span>Woda: {result === false ? '-' : waterWeight + ' g (ml)'}</span>
                 <span>Sól: {result === false ? '-' : saltWeight + ' g'}</span>
                 <span>Oliwa:  {result === false ? '-' : oliWeight + ' g'}</span>
-                <span>Drożdże: {result === false ? '-' :   + ' g'}</span>
+                <span>Drożdże: {result === false ? '-' : yeastWeight + ' g'}</span>
             </div>
             <h1 className='calculator_result_title'>PRZEPIS</h1>
             
