@@ -21,11 +21,16 @@ const Result = (props) =>{
         <div id="calculator_result" className="calculator_result">
             <h1 className='calculator_result_title'>SKŁADNIKI</h1>
             <div className="calculator_result_ingredients">
-                <span>Mąka: {result === false ? '-' : flourWeight + ' g'}</span>
-                <span>Woda: {result === false ? '-' : waterWeight + ' g (ml)'}</span>
-                <span>Sól: {result === false ? '-' : saltWeight + ' g'}</span>
-                <span>Oliwa:  {result === false ? '-' : oliWeight + ' g'}</span>
-                <span>Drożdże: {result === false ? '-' : yeastWeight + ' g'}</span>
+                <span>Mąka: {result === false ? '' : flourWeight + ' g'}</span>
+                <span>Woda: {result === false ? '' : waterWeight + ' g'}</span>
+                <span>Sól: {result === false ? '' : saltWeight + ' g'}</span>
+                <span>Oliwa:  {result === false ? '' : oliWeight + ' g'}</span>
+                <span>Drożdże: {result === false ? '' : yeastWeight + ' g'}
+                <div className='tooltip inline'>
+                    <img src="/src/assets/question.png" alt=""/>
+                    <span>Podana wartość odnosi się do używania drożdży świeżych, jeśli chcesz użyć drożdży suchych należy użyć podwoić podaną wartość.</span>
+                </div>
+                </span>  
             </div>
             <h1 className='calculator_result_title'>PRZEPIS</h1>
             
