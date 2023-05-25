@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import { Result } from './Result';
 
 const Calculator = () => {

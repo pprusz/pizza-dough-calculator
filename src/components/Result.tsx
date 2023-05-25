@@ -28,7 +28,7 @@ const Result = (props) =>{
                 <span>Drożdże: {result === false ? '' : yeastWeight + ' g'}
                 <div className='tooltip inline'>
                     <img src="/src/assets/question.png" alt=""/>
-                    <span>Podana wartość odnosi się do używania drożdży świeżych, jeśli chcesz użyć drożdży suchych należy użyć podwoić podaną wartość.</span>
+                    <span>Podana wartość odnosi się do używania drożdży świeżych, jeśli chcesz użyć drożdży suchych należy podwoić podaną wartość.</span>
                 </div>
                 </span>  
             </div>
