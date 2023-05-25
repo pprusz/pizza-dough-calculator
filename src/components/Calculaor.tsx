@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import { Result } from './Result';
 
 const Calculator = () => {
@@ -25,7 +24,10 @@ const Calculator = () => {
         <div className="calculator_ingr_element">
           <label htmlFor="portion" className="calculator_ingr_element_title">
             Ilość porcji
-            <img src="/src/assets/question.png" alt="" />
+            <div className='tooltip'>
+              <img src="/src/assets/question.png" alt=""/>
+              <span>Podaj liczbę odpowiadającą ilości kulek na pizze, które chcesz uzyskać.</span>
+            </div>
           </label>
           <input
             pattern="\d*"
@@ -41,7 +43,10 @@ const Calculator = () => {
         <div className="calculator_ingr_element">
           <label htmlFor="weight" className="calculator_ingr_element_title">
             Waga jednej porcji (gram)
-            <img src="/src/assets/question.png" alt="" />
+            <div className='tooltip'>
+              <img src="/src/assets/question.png" alt=""/>
+              <span className='even'>Podaj wagę jaką mają mieć Twoje kulki na pizzę, zwykle wartość ta wynosi 250-300g zależnie od wielkość pizzy jaką chcesz uzyskać.</span>
+            </div>
           </label>
 
           <input
@@ -58,7 +63,10 @@ const Calculator = () => {
         <div className="calculator_ingr_element">
           <label htmlFor="hydro" className="calculator_ingr_element_title">
             Hydracja ciasta (%)
-            <img src="/src/assets/question.png" alt="" />
+            <div className='tooltip'>
+              <img src="/src/assets/question.png" alt=""/>
+              <span>Ilość wody w cieście w stosunku do mąki. Przy okrągłych pizzach optymalną ilością jest zakres 55% – 65%.</span>
+            </div>
           </label>
           <input
             pattern="\d*"
@@ -74,7 +82,10 @@ const Calculator = () => {
         <div className="calculator_ingr_element">
           <label htmlFor="salt" className="calculator_ingr_element_title">
             Sól na litr wody (gram)
-            <img src="/src/assets/question.png" alt="" />
+            <div className='tooltip'>
+              <img src="/src/assets/question.png" alt=""/>
+              <span className='even'>Wybierz ilość soli biorąc pod uwagę kilka wskazówek. Sugerowany zakres wynosi od 40 g – 60 g na litr wody.</span>
+            </div>
           </label>
           <input
             pattern="\d*"
@@ -90,7 +101,10 @@ const Calculator = () => {
         <div className="calculator_ingr_element">
           <label htmlFor="oil" className="calculator_ingr_element_title">
             Oliwa na litr wody (gram)
-            <img src="/src/assets/question.png" alt="" />
+            <div className='tooltip'>
+              <img src="/src/assets/question.png" alt=""/>
+              <span>Podaj ilość tłuszczu jaką chcesz dodać do ciasta. Sugerowana ilość 30-50g na litr wody.</span>
+            </div>
           </label>
           <input
             pattern="\d*"
@@ -101,11 +115,10 @@ const Calculator = () => {
             type="text"
             value={inputs.oil}
             onChange={handleInputChange}
-          />
+          />      
         </div>
       </div>
-      {/* <button className="calculator_button" onClick={handleSubmit}>OBLICZ PROPORCJE</button> */}
-      {/* {visible === 0 ? null : <Result inputs={inputs}/>}       */}
+
       <Result inputs={inputs}/>
     </section>
   );
