@@ -1,8 +1,14 @@
 
 
 const Fast = (props) =>{
+    const flourWeight = props.flourWeight;
+    const waterWeight = props.waterWeight;
+    const saltWeight = props.saltWeight;
+    const oilWeight = props.oilWeight;
+    const yeastWeight = props.yeastWeight;
+    
     return(
-        <section>
+        <section className="instructions">
 
         </section>
     )
