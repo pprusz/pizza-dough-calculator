@@ -88,6 +88,7 @@ const Result: React.FC<{ inputs: Inputs }> = (props) => {
           saltWeight={saltWeight}
           oilWeight={oilWeight}
           yeastWeight={yeastWeight}
+          portion = {portion}
         />
       ) : (
         <Fast
@@ -96,6 +97,7 @@ const Result: React.FC<{ inputs: Inputs }> = (props) => {
           saltWeight={saltWeight}
           oilWeight={oilWeight}
           yeastWeight={yeastWeight}
+          portion = {portion}
         />
       )}
     </div>
