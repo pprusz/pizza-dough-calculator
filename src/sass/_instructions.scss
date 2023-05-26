@@ -7,4 +7,17 @@
     display: flex;
     color: white;
     flex-direction: column;
+    padding: 4rem 0;
+    width: 80%;
+
+    ol{
+        list-style-type: decimal;
+
+        li{
+            font-size: 2rem;
+            margin: 1rem 0;
+            line-height: 1.3;
+
+        }
+    }
 }
