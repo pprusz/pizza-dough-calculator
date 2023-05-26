@@ -1,16 +1,16 @@
-import React, { useState } from 'react';
-import { Result } from './Result';
+import React, { useState, ChangeEvent } from 'react';
+import { Result, Inputs } from './Result';
 
-const Calculator = () => {
-    const [inputs, setInputs] = useState({
-        portion: '',
-        weight: '',
-        hydro: '',
-        salt: '',
-        oil: '',
-    });
+const Calculator: React.FC = () => {
+  const [inputs, setInputs] = useState<Inputs>({
+    portion: '',
+    weight: '',
+    hydro: '',
+    salt: '',
+    oil: '',
+  });
 
-  const handleInputChange = (event) => {
+  const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
     const { id, value } = event.target;
     setInputs((prevInputs) => ({
       ...prevInputs,
@@ -120,7 +120,7 @@ const Calculator = () => {
         </div>
       </div>
 
-      <Result inputs={inputs}/>
+      <Result inputs={inputs} />
     </section>
   );
 };
