@@ -70,6 +70,8 @@
 
             .active{
                 border: 0.75px solid $main-color;
+                box-shadow: 0 0 2px $main-color
+                
             }
             
             &_button{
@@ -83,6 +85,7 @@
                 font-size: 1.8rem;
                 font-weight: 400;
                 margin: 15px ;
+                transition: 0.2s;
 
                 &:hover{
                     border: 0.75px solid $main-color;
