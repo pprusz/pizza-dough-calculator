@@ -74,26 +74,29 @@ const Result= (props) => {
           </div>}
         </span>
       </div>
-
-      <h1 className="calculator_result_title">PRZEPIS</h1>
-      {doughType === 0 ? (
-        <Maturing
-          flourWeight={flourWeight}
-          waterWeight={waterWeight}
-          saltWeight={saltWeight}
-          oilWeight={oilWeight}
-          yeastWeight={yeastWeight}
-          portion = {portion}
-        />
-      ) : (
-        <Fast
-          flourWeight={flourWeight}
-          waterWeight={waterWeight}
-          saltWeight={saltWeight}
-          oilWeight={oilWeight}
-          yeastWeight={yeastWeight}
-          portion = {portion}
-        />
+      {result === false ? '' : (
+        <div className="calculator_result_container">
+          <h1 className="calculator_result_title">PRZEPIS</h1>
+          {doughType === 0 ? (
+            <Maturing
+              flourWeight={flourWeight}
+              waterWeight={waterWeight}
+              saltWeight={saltWeight}
+              oilWeight={oilWeight}
+              yeastWeight={yeastWeight}
+              portion={portion}
+            />
+          ) : (
+            <Fast
+              flourWeight={flourWeight}
+              waterWeight={waterWeight}
+              saltWeight={saltWeight}
+              oilWeight={oilWeight}
+              yeastWeight={yeastWeight}
+              portion={portion}
+            />
+          )}
+        </div>
       )}
     </div>
   );

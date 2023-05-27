@@ -72,6 +72,12 @@
         margin-top: 40px;
         transition: 0.2s;
 
+        &_container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
         &_ingredients{
             display: flex;
             flex-wrap: wrap;
