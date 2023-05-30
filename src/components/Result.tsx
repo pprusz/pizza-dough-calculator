@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 import { Fast } from "./Fast";
 import { Maturing } from "./Maturing";

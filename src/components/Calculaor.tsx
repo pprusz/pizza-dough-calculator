@@ -1,4 +1,4 @@
-import React, { useState, ChangeEvent } from 'react';
+import { useState, ChangeEvent } from 'react';
 import { Result, Inputs } from './Result';
 
 const Calculator: React.FC = () => {
@@ -17,13 +17,10 @@ const Calculator: React.FC = () => {
       [id]: value,
       
     }));
-    console.log(value)
   };
-  console.log('olej'+inputs.oil)
 
   const handleSliderChange = (event: ChangeEvent<HTMLInputElement>) =>{
     const value = event.target.value;
-    console.log(value)
   }
 
   return (
@@ -38,7 +35,7 @@ const Calculator: React.FC = () => {
               <span>Podaj liczbę odpowiadającą ilości kulek na pizze, które chcesz uzyskać.</span>
             </div>
           </label>
-          <input onChange={handleInputChange} value={inputs.portion}  type="range" min="1" max="20" className="calculator_slider" id="portion"/>
+          <input onChange={handleInputChange} value={inputs.portion}  type="range" min="1" max="15" className="calculator_slider" id="portion"/>
           <input
             pattern="\d*"
             maxLength={2}
