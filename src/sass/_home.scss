@@ -35,13 +35,11 @@
         background-color: rgba(0, 0, 0, 0.7);
         margin: 0 15rem;
         overflow: auto;
-        padding: 2rem 1rem;
-
-    
+        padding: 2rem 0;
 
         @media (max-width: 700px) {
             margin: 0;
-            width: 90%;
+            width: 97%;
             height: 90%;
         }
         
@@ -70,26 +68,12 @@
 
             .active{
                 border: 0.75px solid $main-color;
-                box-shadow: 0 0 2px $main-color
+                box-shadow: 0 0 3px $main-color
                 
             }
             
             &_button{
-                border: none;
-                background: none;
-                cursor: pointer;
-                border: 0.75px solid transparent;
-                color: white;
-                transition: 0.1s;
-                padding: 1rem ;
-                font-size: 1.8rem;
-                font-weight: 400;
-                margin: 15px ;
-                transition: 0.2s;
-
-                &:hover{
-                    border: 0.75px solid $main-color;
-                }
+                @include button
             }
 
 

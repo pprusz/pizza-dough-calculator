@@ -21,6 +21,7 @@ const Fast = (props) =>{
                 <li>Z podzielonych porcji uformuj kulki.</li>
                 <li>Włóż kulki do lekko naoliwionych pojemników i szczelnie przykryj.</li>
                 <li>Pojemniki odstaw na godzinę w ciepłe nienasłonecznione miejsce.</li>
+                <li>Po godzinie można piec pizze.</li>
             </ol>
         </section>
     )
