@@ -2,7 +2,6 @@ import {useState, ChangeEvent} from "react";
 
 import { Napoletana } from "./Napoletana";
 import { Classica } from "./Classica";
-import { Romana } from "./Romana";
 
 const Recipes = () =>{
     const [recipe, setRecipe] = useState(0);
@@ -10,11 +9,10 @@ const Recipes = () =>{
 
     const handleRecipeChange = (index: number) =>{
         setRecipe(index);
-        setPortion(1);
     };
 
     const handlePortionChange = (event: ChangeEvent<HTMLInputElement>) => {
-        const value = event?.target.value
+        const value = Number(event?.target.value);
         setPortion(value);
       };
     
@@ -24,7 +22,6 @@ const Recipes = () =>{
             <div className="recipes_buttons">
                 <button onClick={()=>handleRecipeChange(0)} className={`recipes_buttons_button ${recipe === 0 ? 'active' : ''}`}>Napoletana</button>
                 <button onClick={()=>handleRecipeChange(1)} className={`recipes_buttons_button ${recipe === 1 ? 'active' : ''}`}>Classica</button>
-                <button onClick={()=>handleRecipeChange(2)} className={`recipes_buttons_button ${recipe === 2 ? 'active' : ''}`}>Teglia alla Romana</button>
             </div>
             <div className="calculator_ingr_element">
                 <label className="calculator_ingr_element_title">Ilość porcji
@@ -41,7 +38,7 @@ const Recipes = () =>{
                     type="text"
                 />
             </div>
-            {recipe === 0 ? <Napoletana/> : recipe === 1 ? <Classica/> : <Romana/>}
+            {recipe === 0 ? <Napoletana portion= {portion}/> : <Classica portion= {portion}/> }
         </section>
     )
 }
