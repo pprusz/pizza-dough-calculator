@@ -1,7 +1,8 @@
-export const Classica = () =>{
+export const Classica = (props) =>{
+    const portion = props.portion;
     return(
         <section className="">
-Classica
+            Classica 
         </section>
     )
 }
