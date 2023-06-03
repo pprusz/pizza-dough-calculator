@@ -28,13 +28,35 @@
         
     }
     .recipe{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         font-size: 1.8rem;
         text-align: center;
         width: 90%;
-        margin-top: 5rem;
+        margin-top: 3rem;
         
+        &_description{
+            line-height: 2;
+            width: 80%;
+            margin: 2rem 0;
+        }
         &_title{
             line-height: 2;
+            @include title;
+        }
+
+        &_ingredients{
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin: 4rem 0;
+
+            &_element{
+                width: 40%;
+                margin: 2rem 0;
+                text-align: center;
+            }
         }
 
     }
