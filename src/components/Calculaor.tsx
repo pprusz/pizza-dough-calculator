@@ -19,13 +19,13 @@ const Calculator: React.FC = () => {
     }));
   };
 
-  const handleSliderChange = (event: ChangeEvent<HTMLInputElement>) =>{
-    const value = event.target.value;
-  }
+  // const handleSliderChange = (event: ChangeEvent<HTMLInputElement>) =>{
+  //   const value = event.target.value;
+  // }
 
   return (
     <section className="calculator">
-      <h1 className="calculator_title">SKŁADNIKI</h1>
+      <h1 className="calculator_title">PARAMETRY CIASTA</h1>
       <div className="calculator_ingr">
         <div className="calculator_ingr_element">
           <label className="calculator_ingr_element_title">
